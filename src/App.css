@@ -31,3 +31,6 @@ main {
   justify-content: flex-start;
   align-items: stretch;
 }
+main a {
+  color: black;
+}

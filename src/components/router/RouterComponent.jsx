@@ -9,6 +9,7 @@ import {
 import data from "../../data/data";
 
 import CategoryPage from "../categoryPage/CategoryPage";
+import DetailsPage from "../detailsPage/DetailsPage";
 
 const RouterComponent = () => {
   return (
@@ -28,6 +29,7 @@ const RouterComponent = () => {
           <Switch>
             {Object.keys(data).map(dataItem => (
               <Route
+                exact
                 path={`/${dataItem}`}
                 key={dataItem}
                 render={() => (
@@ -35,6 +37,15 @@ const RouterComponent = () => {
                 )}
               />
             ))}
+            {Object.keys(data).map(dataItem =>
+              data[dataItem].map(item => (
+                <Route
+                  path={`/${dataItem}/${item.id}`}
+                  key={item.id}
+                  render={() => <DetailsPage content={item} />}
+                />
+              ))
+            )}
           </Switch>
         </main>
       </React.Fragment>

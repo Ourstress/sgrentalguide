@@ -1,4 +1,4 @@
-export const items = [
+const rental = [
   {
     name: "3 Checks under immigration act",
     details: "blah"
@@ -8,3 +8,5 @@ export const items = [
     details: "blah"
   }
 ];
+
+export default rental;

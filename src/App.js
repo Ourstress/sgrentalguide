@@ -5,9 +5,9 @@ import RouterComponent from "./components/router/RouterComponent";
 class App extends Component {
   render() {
     return (
-      <main>
+      <React.Fragment>
         <RouterComponent />
-      </main>
+      </React.Fragment>
     );
   }
 }

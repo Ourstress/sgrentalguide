@@ -5,7 +5,7 @@ const CategoryPage = props => {
     <section>
       <h1>{props.title}</h1>
       {props.items.map(item => (
-        <p>{item.name}</p>
+        <p key={item.name}>{item.name}</p>
       ))}
     </section>
   );

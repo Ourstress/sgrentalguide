@@ -4,28 +4,30 @@
 
 .header {
   background-color: #282c34;
-
   height: 10vh;
-
+  width: 100vw;
   display: flex;
-
   flex-direction: row;
-
   align-items: center;
-
   justify-content: center;
-
   color: white;
 }
-
+a {
+  text-decoration: none;
+  color: white;
+}
+.sidebar {
+  width: 25vw;
+}
+.sidebar a {
+  color: gray;
+  padding: 3vw;
+  display: block;
+}
 main {
-  min-height: 80vh;
-
+  min-height: 90vh;
   display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
 }

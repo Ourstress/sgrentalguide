@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Switch
+} from "react-router-dom";
 
 import data from "../../data/data";
 
@@ -9,21 +14,29 @@ const RouterComponent = () => {
   return (
     <Router>
       <React.Fragment>
-        <nav>
-          {Object.keys(data).map(dataItem => (
-            <NavLink to={`/${dataItem}`}> {dataItem} </NavLink>
-          ))}
+        <nav className="header">
+          <NavLink to="#">Login</NavLink>
         </nav>
-        <switch>
-          {Object.keys(data).map(dataItem => (
-            <Route
-              path={`/${dataItem}`}
-              render={() => (
-                <CategoryPage items={data[dataItem]} title={dataItem} />
-              )}
-            />
-          ))}
-        </switch>
+        <main>
+          <nav className="sidebar">
+            {Object.keys(data).map(dataItem => (
+              <NavLink to={`/${dataItem}`} key={dataItem}>
+                {dataItem}
+              </NavLink>
+            ))}
+          </nav>
+          <Switch>
+            {Object.keys(data).map(dataItem => (
+              <Route
+                path={`/${dataItem}`}
+                key={dataItem}
+                render={() => (
+                  <CategoryPage items={data[dataItem]} title={dataItem} />
+                )}
+              />
+            ))}
+          </Switch>
+        </main>
       </React.Fragment>
     </Router>
   );

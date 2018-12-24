@@ -11,15 +11,18 @@ import data from "../../data/data";
 import CategoryPage from "../categoryPage/CategoryPage";
 import DetailsPage from "../detailsPage/DetailsPage";
 import MenuToggle from "../nav/MenuToggle";
+import AirtableAPI from "../../data/AirtableAPI";
 
 const RouterComponent = () => {
   const { sidebar, SidebarMenuToggle } = MenuToggle();
+  const result = AirtableAPI();
   return (
     <Router>
       <React.Fragment>
         <nav className="header">
           <NavLink to="#">Login</NavLink>
           {SidebarMenuToggle}
+          <h1>{result.dataItems.Notes}</h1>
         </nav>
         <main>
           <nav className={sidebar ? "sidebar" : "hiddenSidebar"}>

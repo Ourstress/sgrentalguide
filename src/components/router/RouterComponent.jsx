@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -10,21 +10,16 @@ import data from "../../data/data";
 
 import CategoryPage from "../categoryPage/CategoryPage";
 import DetailsPage from "../detailsPage/DetailsPage";
+import MenuToggle from "../nav/MenuToggle";
 
 const RouterComponent = () => {
-  let [sidebar, setSidebar] = useState(true);
-
+  const { sidebar, SidebarMenuToggle } = MenuToggle();
   return (
     <Router>
       <React.Fragment>
         <nav className="header">
           <NavLink to="#">Login</NavLink>
-          <div id="menuToggle">
-            <input type="checkbox" onClick={() => setSidebar(!sidebar)} />
-            <span />
-            <span />
-            <span />
-          </div>
+          {SidebarMenuToggle}
         </nav>
         <main>
           <nav className={sidebar ? "sidebar" : "hiddenSidebar"}>

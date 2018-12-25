@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 const CategoryPage = props => {
   return (
     <section>
-      <h1>{props.title}</h1>
-      {props.items.map(item => (
-        <NavLink to={`/${props.title}/${item.id}`} key={item.id}>
-          {item.name}
+      <h1>Rental</h1>
+      {props.items.dataItems.map(item => (
+        <NavLink to={`/Rental/${item.id}`} key={item.id}>
+          {item.Name}
         </NavLink>
       ))}
     </section>

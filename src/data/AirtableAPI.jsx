@@ -1,21 +1,29 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Airtable from "airtable";
 
-const AirtableAPI = () => {
+const AirtableAPI = selectedBase => {
   const [data, setData] = useState({ dataItems: [] });
+  const baseData = {
+    Rental: { baseID: "appdTzUSAOOsonnQL", baseName: "Rental" }
+  };
   const base = new Airtable({
     apiKey: process.env.REACT_APP_AIRTABLEAPIKEY
-  }).base("appdTzUSAOOsonnQL");
+  }).base(baseData[selectedBase].baseID);
 
-  const fetchData = async () => {
-    const selection = await base("Rental")
+  const fetchAllData = async () => {
+    const selection = await base(baseData[selectedBase].baseName)
       .select({})
       .all();
-    const selectedData = selection[0].fields;
+    console.log(selection);
+    const selectedData = selection.map(dataItem => {
+      const requiredData = dataItem.fields;
+      requiredData.id = dataItem.id;
+      return requiredData;
+    });
     setData({ dataItems: selectedData });
   };
   useEffect(() => {
-    fetchData();
+    fetchAllData();
   }, []);
   return data;
 };

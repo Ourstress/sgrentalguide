@@ -5,17 +5,17 @@ const DetailsPage = props => {
   return (
     <main>
       <section>
-        <Viewer className="writeup" html={props.content.details} />
+        <Viewer className="writeup" html={props.content.Notes} />
       </section>
       <section>
         <article>
           <header>Exercise</header>
-          <Viewer className="exercise" html={props.content.exercise} />
-          <Viewer className="answer" html={props.content.answer} />
+          <Viewer className="exercise" html={props.content.Exercise} />
+          <Viewer className="answer" html={props.content.Answer} />
         </article>
         <article>
           <header>Resources & references</header>
-          <Viewer className="references" html={props.content.references} />
+          <Viewer className="references" html={props.content.References} />
         </article>
       </section>
     </main>

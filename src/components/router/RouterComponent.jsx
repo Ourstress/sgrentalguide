@@ -6,8 +6,6 @@ import {
   Switch
 } from "react-router-dom";
 
-import data from "../../data/data";
-
 import CategoryPage from "../categoryPage/CategoryPage";
 import DetailsPage from "../detailsPage/DetailsPage";
 import MenuToggle from "../nav/MenuToggle";
@@ -15,43 +13,31 @@ import AirtableAPI from "../../data/AirtableAPI";
 
 const RouterComponent = () => {
   const { sidebar, SidebarMenuToggle } = MenuToggle();
-  const result = AirtableAPI();
+  const rentalResults = AirtableAPI("Rental");
   return (
     <Router>
       <React.Fragment>
         <nav className="header">
           <NavLink to="#">Login</NavLink>
           {SidebarMenuToggle}
-          <h1>{result.dataItems.Notes}</h1>
         </nav>
         <main>
           <nav className={sidebar ? "sidebar" : "hiddenSidebar"}>
-            {Object.keys(data).map(dataItem => (
-              <NavLink to={`/${dataItem}`} key={dataItem}>
-                {dataItem}
-              </NavLink>
-            ))}
+            <NavLink to={"/Rental"}>Rental</NavLink>
           </nav>
           <Switch>
-            {Object.keys(data).map(dataItem => (
+            <Route
+              exact
+              path={"/Rental"}
+              render={() => <CategoryPage items={rentalResults} />}
+            />
+            {rentalResults.dataItems.map(dataItem => (
               <Route
-                exact
-                path={`/${dataItem}`}
-                key={dataItem}
-                render={() => (
-                  <CategoryPage items={data[dataItem]} title={dataItem} />
-                )}
+                path={`/Rental/${dataItem.id}`}
+                key={dataItem.id}
+                render={() => <DetailsPage content={dataItem} />}
               />
             ))}
-            {Object.keys(data).map(dataItem =>
-              data[dataItem].map(item => (
-                <Route
-                  path={`/${dataItem}/${item.id}`}
-                  key={item.id}
-                  render={() => <DetailsPage content={item} />}
-                />
-              ))
-            )}
           </Switch>
         </main>
       </React.Fragment>

@@ -4,7 +4,7 @@ import styles from "./DetailsPage.module.css";
 
 const DetailsPage = props => {
   return (
-    <main>
+    <article className={styles.detailsPageBody}>
       <section className={styles.writeup}>
         <Viewer html={props.content.Notes} />
       </section>
@@ -26,7 +26,7 @@ const DetailsPage = props => {
           <Viewer className="references" html={props.content.References} />
         </article>
       </section>
-    </main>
+    </article>
     // <main>
     //   <section>
     //     <Editor className="writeup" />

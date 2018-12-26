@@ -23,3 +23,13 @@
 .writeup h2 {
   margin: 0;
 }
+.detailsPageBody {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 500px) {
+  .detailsPageBody {
+    flex-direction: column;
+  }
+}

@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import { Editor, Viewer } from "yosgo-editor";
+
 import styles from "./DetailsPage.module.css";
 
 const DetailsPage = props => {
+  useEffect(() => {
+    props.setSidebar(false);
+  }, []);
   return (
     <article className={styles.detailsPageBody}>
       <section className={styles.writeup}>

@@ -5,7 +5,11 @@ const MenuToggle = () => {
   const [sidebar, setSidebar] = useState(false);
   const SidebarMenuToggle = (
     <div id={styles.menuToggle}>
-      <input type="checkbox" onClick={() => setSidebar(!sidebar)} />
+      <input
+        type="checkbox"
+        onChange={() => setSidebar(!sidebar)}
+        checked={sidebar}
+      />
       <span />
       <span />
       <span />
@@ -13,6 +17,7 @@ const MenuToggle = () => {
   );
   return {
     sidebar,
+    setSidebar,
     SidebarMenuToggle
   };
 };

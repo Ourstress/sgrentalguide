@@ -7,7 +7,7 @@ import MenuToggle from "../nav/MenuToggle";
 import AirtableAPI from "../../data/AirtableAPI";
 
 const RouterComponent = () => {
-  const { sidebar, SidebarMenuToggle } = MenuToggle();
+  const { sidebar, setSidebar, SidebarMenuToggle } = MenuToggle();
   const rentalResults = AirtableAPI("Rental");
   return (
     <Router>
@@ -30,7 +30,9 @@ const RouterComponent = () => {
               <Route
                 path={`/Rental/${dataItem.id}`}
                 key={dataItem.id}
-                render={() => <DetailsPage content={dataItem} />}
+                render={() => (
+                  <DetailsPage content={dataItem} setSidebar={setSidebar} />
+                )}
               />
             ))}
           </Switch>

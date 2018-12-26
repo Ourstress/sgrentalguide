@@ -4,7 +4,7 @@
   font-family: "quicksand";
 }
 .writeup {
-  margin: 0 2vw;
+  margin: 0 calc(10px + 1vw);
 }
 .writeup * ul {
   padding: 0;
@@ -14,8 +14,8 @@
 }
 .writeup * li::before {
   width: 0;
-  margin-right: 1em;
-  margin-left: 1em;
+  margin-right: 1em !important;
+  margin-left: -1em !important;
 }
 .writeup article {
   margin-bottom: 18px;

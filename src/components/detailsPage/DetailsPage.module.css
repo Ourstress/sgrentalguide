@@ -1,0 +1,25 @@
+.writeup * {
+  font-size: 18px;
+  line-height: 36px;
+  font-family: "quicksand";
+}
+.writeup {
+  margin: 0 2vw;
+}
+.writeup * ul {
+  padding: 0;
+}
+.writeup * li {
+  padding-left: 1em !important;
+}
+.writeup * li::before {
+  width: 0;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+.writeup article {
+  margin-bottom: 18px;
+}
+.writeup h2 {
+  margin: 0;
+}

@@ -1,20 +1,28 @@
 import React from "react";
 import { Editor, Viewer } from "yosgo-editor";
+import styles from "./DetailsPage.module.css";
 
 const DetailsPage = props => {
   return (
     <main>
-      <section>
-        <Viewer className="writeup" html={props.content.Notes} />
+      <section className={styles.writeup}>
+        <Viewer html={props.content.Notes} />
       </section>
-      <section>
+      <section className={styles.writeup}>
         <article>
-          <header>Exercise</header>
+          <header>
+            <h2>Exercise</h2>
+          </header>
           <Viewer className="exercise" html={props.content.Exercise} />
+          <header>
+            <h2>Answer</h2>
+          </header>
           <Viewer className="answer" html={props.content.Answer} />
         </article>
         <article>
-          <header>Resources & references</header>
+          <header>
+            <h2>Resources & references</h2>
+          </header>
           <Viewer className="references" html={props.content.References} />
         </article>
       </section>

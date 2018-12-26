@@ -14,7 +14,6 @@ const AirtableAPI = selectedBase => {
     const selection = await base(baseData[selectedBase].baseName)
       .select({})
       .all();
-    console.log(selection);
     const selectedData = selection.map(dataItem => {
       const requiredData = dataItem.fields;
       requiredData.id = dataItem.id;

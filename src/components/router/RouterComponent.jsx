@@ -18,7 +18,7 @@ const RouterComponent = () => {
     <Router>
       <React.Fragment>
         <nav className="header">
-          <NavLink to="#">Login</NavLink>
+          <NavLink to="#">Sgpropguide</NavLink>
           {SidebarMenuToggle}
         </nav>
         <main>

@@ -1,0 +1,25 @@
+.header {
+  margin: 36px 0px 18px 0px;
+  font-size: 36px;
+  line-height: 44px;
+}
+.header::after {
+  display: block;
+  width: 110px;
+  content: "";
+  border-bottom: 10px solid rosybrown;
+}
+.link {
+  color: royalblue;
+  display: block;
+  margin-bottom: 18px;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+.linkContainer {
+  margin: 0 10vw;
+  /* max-width: 35em;
+  min-width: 25em; */
+}

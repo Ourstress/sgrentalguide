@@ -47,3 +47,11 @@ a {
   padding: 3vw;
   display: block;
 }
+
+.authWithGithub {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  font-size: 10px;
+  opacity: 0;
+}

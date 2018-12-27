@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "airtable": "^0.5.8",
+    "netlify-auth-providers": "^1.0.0-alpha5",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
     "react-router-dom": "^4.3.1",

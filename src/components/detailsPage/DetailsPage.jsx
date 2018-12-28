@@ -17,7 +17,7 @@ const DetailsPage = props => {
   return (
     <article className={styles.detailsPageBody}>
       <section className={styles.writeup}>
-        {props.user ? (
+        {props.userData === 46162676 ? (
           <Editor value={notes} onChange={setNotes} />
         ) : (
           <Viewer html={props.content.Notes} />
@@ -28,7 +28,7 @@ const DetailsPage = props => {
           <header>
             <h2>Exercise</h2>
           </header>
-          {props.user ? (
+          {props.userData === 46162676 ? (
             <Editor
               className="exercise"
               value={exercise}
@@ -40,7 +40,7 @@ const DetailsPage = props => {
           <header>
             <h2>Answer</h2>
           </header>
-          {props.user ? (
+          {props.userData === 46162676 ? (
             <Editor className="answer" value={answer} onChange={setAnswer} />
           ) : (
             <Viewer className="answer" html={props.content.Answer} />
@@ -50,7 +50,7 @@ const DetailsPage = props => {
           <header>
             <h2>Resources & references</h2>
           </header>
-          {props.user ? (
+          {props.userData === 46162676 ? (
             <Editor
               className="references"
               value={references}

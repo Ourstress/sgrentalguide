@@ -9,11 +9,16 @@ import Auth from "../../data/Auth";
 
 const RouterComponent = () => {
   const { sidebar, setSidebar, SidebarMenuToggle } = MenuToggle();
-  const { authWithGithub, userAuthStatus, localStorageTokenCheck } = Auth();
+  const {
+    authWithGithub,
+    userAuthStatus,
+    localStorageTokenCheck,
+    userData
+  } = Auth();
   const rentalResults = AirtableAPI("Rental");
   useEffect(() => {
     localStorageTokenCheck();
-  });
+  }, []);
   return (
     <Router>
       <React.Fragment>
@@ -46,7 +51,7 @@ const RouterComponent = () => {
                   <DetailsPage
                     content={dataItem}
                     setSidebar={setSidebar}
-                    user={userAuthStatus}
+                    userData={userData}
                   />
                 )}
               />

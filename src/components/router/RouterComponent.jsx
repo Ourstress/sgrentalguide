@@ -45,7 +45,7 @@ const RouterComponent = () => {
             />
             {rentalResults.dataItems.map(dataItem => (
               <Route
-                path={`/Rental/${dataItem.id}`}
+                path={`/Rental/${dataItem.Slug}`}
                 key={dataItem.id}
                 render={() => (
                   <DetailsPage

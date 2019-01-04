@@ -8,7 +8,7 @@ const CategoryPage = props => {
       <h1 className={styles.header}>Rental</h1>
       {props.items.dataItems.map(item => (
         <NavLink
-          to={`/Rental/${item.id}`}
+          to={`/Rental/${item.Slug}`}
           key={item.id}
           className={styles.link}
         >

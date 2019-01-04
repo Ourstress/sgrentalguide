@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, NavLink, Switch } from "react-router-dom";
 import CategoryPage from "../categoryPage/CategoryPage";
 import DetailsPage from "../detailsPage/DetailsPage";
 import MenuToggle from "../nav/MenuToggle";
-import AirtableAPI from "../../data/AirtableAPI";
+import { fetchAllData } from "../../data/AirtableAPI";
 import Auth from "../../data/Auth";
 
 const RouterComponent = () => {
@@ -15,7 +15,7 @@ const RouterComponent = () => {
     localStorageTokenCheck,
     userData
   } = Auth();
-  const rentalResults = AirtableAPI("Rental");
+  const rentalResults = fetchAllData("Rental");
   useEffect(() => {
     localStorageTokenCheck();
   }, []);

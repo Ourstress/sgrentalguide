@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Editor, Viewer } from "yosgo-editor";
 
 import styles from "./DetailsPage.module.css";
+import { updateEntry } from "../../data/AirtableAPI";
 
 const DetailsPage = props => {
   const [notes, setNotes] = useState(props.content.Notes);
@@ -14,11 +15,27 @@ const DetailsPage = props => {
     props.setSidebar(false);
   }, []);
 
+  const updatedData = {
+    Name: props.content.Name,
+    Notes: notes,
+    Exercise: exercise,
+    Answer: answer,
+    References: references,
+    Tags: props.content.Tags
+  };
+
+  const updateEntryOnClick = () => {
+    updateEntry("Rental", props.content.id, updatedData);
+  };
+
   return (
     <article className={styles.detailsPageBody}>
       <section className={styles.writeup}>
         {props.userData === 46162676 ? (
-          <Editor value={notes} onChange={setNotes} />
+          <React.Fragment>
+            <button onClick={updateEntryOnClick}>Save</button>
+            <Editor value={notes} onChange={setNotes} />
+          </React.Fragment>
         ) : (
           <Viewer html={props.content.Notes} />
         )}

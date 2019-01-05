@@ -14,7 +14,7 @@ export const fetchAllData = selectedBase => {
 
   const fetchAllDataFunction = async () => {
     const selection = await base(baseData[selectedBase].baseName)
-      .select({})
+      .select({ view: "Grid view" })
       .all();
     const selectedData = selection.map(dataItem => {
       const requiredData = dataItem.fields;

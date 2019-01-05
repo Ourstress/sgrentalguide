@@ -56,10 +56,6 @@ const RouterComponent = () => {
                 )}
               />
             ))}
-            <Route
-              path={"/horangi-e92ec67a-9342-4b0b-a906-def5653c8520.txt"}
-              render={() => <h3>Please select a topic.</h3>}
-            />
           </Switch>
         </main>
       </React.Fragment>

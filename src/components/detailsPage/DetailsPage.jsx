@@ -16,6 +16,7 @@ const DetailsPage = props => {
   }, []);
 
   const updatedData = {
+    Slug: props.content.Slug,
     Name: props.content.Name,
     Notes: notes,
     Exercise: exercise,
@@ -31,6 +32,9 @@ const DetailsPage = props => {
   return (
     <article className={styles.detailsPageBody}>
       <section className={styles.writeup}>
+        <header>
+          <h2>{props.content.Name}</h2>
+        </header>
         {props.userData === 46162676 ? (
           <React.Fragment>
             <button onClick={updateEntryOnClick}>Save</button>
@@ -40,7 +44,7 @@ const DetailsPage = props => {
           <Viewer html={props.content.Notes} />
         )}
       </section>
-      <section className={styles.writeup}>
+      <section className={`${styles.exerciseBody} ${styles.writeup}`}>
         <article>
           <header>
             <h2>Exercise</h2>

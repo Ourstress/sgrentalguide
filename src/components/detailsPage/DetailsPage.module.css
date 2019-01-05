@@ -21,11 +21,16 @@
   margin-bottom: 18px;
 }
 .writeup h2 {
+  font-size: 20px;
   margin: 0;
 }
 .detailsPageBody {
   display: flex;
   flex-direction: row;
+}
+
+.exerciseBody {
+  width: 80%;
 }
 
 @media (max-width: 500px) {

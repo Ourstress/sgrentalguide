@@ -10,7 +10,7 @@ const CategoryPage = props => {
         props.items.dataItems,
         "Tags",
         props.filterCriteria,
-        props.heading
+        props.urlCategory
       )}
     </section>
   );

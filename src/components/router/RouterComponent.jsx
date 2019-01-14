@@ -46,6 +46,7 @@ const RouterComponent = () => {
                 <CategoryPage
                   items={rentalResults}
                   heading="Rental Process"
+                  urlCategory="Rental"
                   filterCriteria="Process"
                 />
               )}
@@ -57,6 +58,7 @@ const RouterComponent = () => {
                 <CategoryPage
                   items={rentalResults}
                   heading="Wiki"
+                  urlCategory="Rental"
                   filterCriteria="Wiki"
                 />
               )}

@@ -27,10 +27,11 @@
 .detailsPageBody {
   display: flex;
   flex-direction: row;
+  width: 95%;
 }
 
 .exerciseBody {
-  width: 80%;
+  width: 95%;
 }
 
 @media (max-width: 500px) {

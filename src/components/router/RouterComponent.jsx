@@ -36,12 +36,30 @@ const RouterComponent = () => {
         <main>
           <nav className={sidebar ? "sidebar" : "hiddenSidebar"}>
             <NavLink to={"/Rental"}>Rental</NavLink>
+            <NavLink to={"/Wiki"}>Wiki</NavLink>
           </nav>
           <Switch>
             <Route
               exact
               path={"/Rental"}
-              render={() => <CategoryPage items={rentalResults} />}
+              render={() => (
+                <CategoryPage
+                  items={rentalResults}
+                  heading="Rental Process"
+                  filterCriteria="Process"
+                />
+              )}
+            />
+            <Route
+              exact
+              path={"/Wiki"}
+              render={() => (
+                <CategoryPage
+                  items={rentalResults}
+                  heading="Wiki"
+                  filterCriteria="Wiki"
+                />
+              )}
             />
             {rentalResults.dataItems.map(dataItem => (
               <Route

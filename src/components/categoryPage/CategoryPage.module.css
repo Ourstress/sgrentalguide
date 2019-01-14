@@ -9,14 +9,6 @@
   content: "";
   border-bottom: 10px solid rosybrown;
 }
-.link {
-  color: royalblue;
-  display: block;
-  margin-bottom: 18px;
-}
-.link:hover {
-  text-decoration: underline;
-}
 
 .linkContainer {
   margin: 0 10vw;

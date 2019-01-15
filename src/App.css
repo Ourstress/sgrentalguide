@@ -1,6 +1,7 @@
 * {
   font-size: 18px;
   line-height: 18px;
+  font-family: "quicksand";
 }
 @media (min-height: 399px) {
   * {
@@ -53,7 +54,7 @@ a {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(33, 33, 33, 0.85);
+  background-color: rgba(33, 33, 33, 0.65);
   z-index: 1000;
   transition: all 0.5s ease-in;
 }

@@ -25,13 +25,6 @@
   border-bottom: 1px solid grey;
   box-sizing: border-box;
 }
-
-.sidebar {
-  width: 25vw;
-}
-.hiddenSidebar {
-  display: none;
-}
 main {
   min-height: 90vh;
   display: flex;
@@ -43,15 +36,24 @@ a {
   text-decoration: none;
   color: gray;
 }
-.sidebar a {
-  padding: 3vw;
-  display: block;
-}
-
 .authWithGithub {
   position: absolute;
   top: 14px;
   right: 20px;
   font-size: 10px;
   opacity: 0;
+}
+
+.modalBackground.Hide {
+  transform: translate(-110%);
+}
+.modalBackground {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(33, 33, 33, 0.85);
+  z-index: 1000;
+  transition: all 0.5s ease-in;
 }

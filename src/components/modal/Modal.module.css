@@ -1,0 +1,10 @@
+.modalContent {
+  width: 25vw;
+  text-align: center;
+  background-color: rgba(250, 250, 250, 1);
+  z-index: 1001;
+}
+.modalContent a {
+  display: block;
+  padding-bottom: 3vh;
+}

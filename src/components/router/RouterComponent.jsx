@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, NavLink, Switch } from "react-router-dom";
 import CategoryPage from "../categoryPage/CategoryPage";
 import DetailsPage from "../detailsPage/DetailsPage";
 import MenuToggle from "../nav/MenuToggle";
+import Modal from "../modal/Modal";
 import { fetchAllData } from "../../data/AirtableAPI";
 import Auth from "../../data/Auth";
 
@@ -34,10 +35,7 @@ const RouterComponent = () => {
           )}
         </nav>
         <main>
-          <nav className={sidebar ? "sidebar" : "hiddenSidebar"}>
-            <NavLink to={"/Rental"}>Rental</NavLink>
-            <NavLink to={"/Wiki"}>Wiki</NavLink>
-          </nav>
+          <Modal open={sidebar} close={() => setSidebar(!sidebar)} />
           <Switch>
             <Route
               exact

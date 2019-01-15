@@ -24,6 +24,7 @@
   margin: 0;
 }
 .detailsPageBody {
+  margin-top: 90px;
   display: flex;
   flex-direction: row;
   width: 95%;

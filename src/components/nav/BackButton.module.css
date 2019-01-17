@@ -1,0 +1,57 @@
+.backButton {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  /* border-radius: 50%;
+  border: slategray 1px solid; */
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+.backButton:hover {
+  background: slategray;
+}
+
+.backButton:hover .arrowWrap span {
+  background: #fff;
+}
+
+.arrowWrapBack {
+  left: -50% !important;
+}
+
+.arrowWrap {
+  display: block;
+  position: absolute;
+  height: 70%;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease;
+}
+.arrowWrap span {
+  height: 1px;
+  left: 0;
+  top: 50%;
+  background: slategray;
+  position: absolute;
+  display: block;
+  transition: background 0.3s ease;
+}
+.arrowPart1 {
+  width: 100%;
+  transform: translate(0, -50%);
+}
+.arrowPart2 {
+  width: 60%;
+  transform: rotate(-45deg);
+  transform-origin: 0 0;
+}
+.arrowPart3 {
+  width: 60%;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}

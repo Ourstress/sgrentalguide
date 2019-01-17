@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, NavLink, Switch } from "react-router-dom";
 import CategoryPage from "../categoryPage/CategoryPage";
 import DetailsPage from "../detailsPage/DetailsPage";
 import MenuToggle from "../nav/MenuToggle";
+import BackButton from "../nav/BackButton";
 import Modal from "../modal/Modal";
 import { fetchAllData } from "../../data/AirtableAPI";
 import Auth from "../../data/Auth";
@@ -25,6 +26,7 @@ const RouterComponent = () => {
       <React.Fragment>
         <nav className="header">
           <NavLink to="#">Sgpropguide</NavLink>
+          <BackButton />
           {SidebarMenuToggle}
           {userAuthStatus ? (
             ""

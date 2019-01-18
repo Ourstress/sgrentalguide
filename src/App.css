@@ -29,6 +29,11 @@
   border-bottom: 1px solid grey;
   box-sizing: border-box;
 }
+.headerText {
+  font-family: "ibm-plex-sans-condensed";
+  font-weight: 100;
+  font-style: italic;
+}
 main {
   min-height: 90vh;
   display: flex;

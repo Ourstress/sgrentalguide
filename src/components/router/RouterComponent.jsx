@@ -25,7 +25,9 @@ const RouterComponent = () => {
     <Router>
       <React.Fragment>
         <nav className="header">
-          <NavLink to="#">Sgpropguide</NavLink>
+          <NavLink to="#" className="headerText">
+            sgpropguide
+          </NavLink>
           <BackButton />
           {SidebarMenuToggle}
           {userAuthStatus ? (

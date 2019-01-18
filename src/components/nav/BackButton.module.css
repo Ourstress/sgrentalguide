@@ -5,16 +5,15 @@
   top: 50%;
   left: 25%;
   transform: translate(-50%, -50%);
-  /* border-radius: 50%;
-  border: slategray 1px solid; */
   overflow: hidden;
   transition: background 0.3s ease;
+  border-radius: 50%;
 }
-.backButton:hover {
-  background: slategray;
+.backButton:active {
+  background: rgba(112, 128, 144, 0.5);
 }
 
-.backButton:hover .arrowWrap span {
+.backButton:active .arrowWrap span {
   background: #fff;
 }
 
@@ -36,7 +35,7 @@
   height: 1px;
   left: 0;
   top: 50%;
-  background: slategray;
+  background: rgb(170, 170, 170);
   position: absolute;
   display: block;
   transition: background 0.3s ease;

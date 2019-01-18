@@ -6,6 +6,7 @@ import DetailsPage from "../detailsPage/DetailsPage";
 import MenuToggle from "../nav/MenuToggle";
 import BackButton from "../nav/BackButton";
 import Modal from "../modal/Modal";
+import LandingPage from "../landingPage/LandingPage";
 import { fetchAllData } from "../../data/AirtableAPI";
 import Auth from "../../data/Auth";
 
@@ -25,7 +26,7 @@ const RouterComponent = () => {
     <Router>
       <React.Fragment>
         <nav className="header">
-          <NavLink to="#" className="headerText">
+          <NavLink to="/" className="headerText">
             sgpropguide
           </NavLink>
           <BackButton />
@@ -41,6 +42,7 @@ const RouterComponent = () => {
         <main>
           <Modal open={sidebar} close={() => setSidebar(!sidebar)} />
           <Switch>
+            <Route exact path="/" component={LandingPage} />
             <Route
               exact
               path={"/Rental"}

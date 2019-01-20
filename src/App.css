@@ -28,6 +28,7 @@
   justify-content: center;
   border-bottom: 1px solid rgba(205, 205, 205, 0.4);
   box-sizing: border-box;
+  font-family: "ibm-plex-sans-condensed";
 }
 .headerText {
   font-family: "ibm-plex-sans-condensed";

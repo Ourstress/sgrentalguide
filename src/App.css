@@ -2,6 +2,7 @@
   font-size: 18px;
   line-height: 18px;
   font-family: "quicksand", "ibm-plex-sans-condensed";
+  background-color: rgb(251, 251, 251);
 }
 @media (min-height: 399px) {
   * {
@@ -27,15 +28,29 @@
   justify-content: center;
   border-bottom: 1px solid rgba(205, 205, 205, 0.4);
   box-sizing: border-box;
-  background-color: rgb(251, 251, 251);
+  background-color: white;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
 }
+
+@media (max-width: 600px) {
+  .header {
+    height: 54px;
+  }
+}
+@media (max-height: 600px) {
+  .header {
+    height: 54px;
+  }
+}
+
 .headerText {
   font-family: "ibm-plex-sans-condensed";
   color: rgba(0, 0, 0, 0.54);
   font-weight: 600;
   font-style: italic;
   font-size: 28px;
+  position: absolute;
+  right: calc(10px + 1vw);
 }
 main {
   min-height: 90vh;
@@ -48,9 +63,9 @@ a {
   text-decoration: none;
 }
 .authWithGithub {
-  position: absolute;
+  /* position: absolute;
   top: 14px;
-  right: 20px;
+  right: 20px; */
   font-size: 10px;
   opacity: 0;
 }

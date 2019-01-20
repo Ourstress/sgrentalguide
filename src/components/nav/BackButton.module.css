@@ -3,7 +3,7 @@
   height: 40px;
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: calc(70px + 1vw);
   transform: translate(-50%, -50%);
   overflow: hidden;
   transition: background 0.2s ease;
@@ -34,7 +34,7 @@
 }
 .arrowWrap span {
   height: 4px;
-  left: 5px;
+  /* left: 5px; */
   background: rgba(0, 0, 0, 0.54);
   position: absolute;
   display: block;

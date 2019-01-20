@@ -30,27 +30,30 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 1s ease;
+  cursor: pointer;
 }
 .arrowWrap span {
-  height: 1px;
-  left: 0;
-  top: 50%;
-  background: rgb(170, 170, 170);
+  height: 4px;
+  left: 5px;
+  background: #cdcdcd;
   position: absolute;
   display: block;
   transition: background 0.3s ease;
 }
-.arrowPart1 {
+/* .arrowPart1 {
+  top: 55%;
   width: 100%;
   transform: translate(0, -50%);
-}
+} */
 .arrowPart2 {
+  top: 50%;
   width: 60%;
   transform: rotate(-45deg);
   transform-origin: 0 0;
 }
 .arrowPart3 {
-  width: 60%;
+  top: 48%;
+  width: 70%;
   transform: rotate(45deg);
   transform-origin: 0 0;
 }

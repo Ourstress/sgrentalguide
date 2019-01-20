@@ -31,8 +31,8 @@
 }
 .headerText {
   font-family: "ibm-plex-sans-condensed";
-  font-weight: 100;
-  font-style: italic;
+  /* font-weight: 100; */
+  /* font-style: italic; */
   font-size: 28px;
 }
 main {

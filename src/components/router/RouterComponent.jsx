@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { HashRouter as Router, Route, NavLink, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import CategoryPage from "../categoryPage/CategoryPage";
 import DetailsPage from "../detailsPage/DetailsPage";
@@ -26,9 +26,9 @@ const RouterComponent = () => {
     <Router>
       <React.Fragment>
         <nav className="header">
-          <NavLink to="/" className="headerText">
+          <Link to="/" className="headerText">
             sgpropguide
-          </NavLink>
+          </Link>
           <BackButton />
           {SidebarMenuToggle}
           {userAuthStatus ? (

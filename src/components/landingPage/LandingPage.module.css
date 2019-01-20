@@ -2,3 +2,9 @@
   margin: 0 10vw;
   margin-top: 72px;
 }
+
+.link {
+  color: royalblue;
+  display: block;
+  margin-bottom: 18px;
+}

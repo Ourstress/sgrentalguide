@@ -10,7 +10,7 @@ const BackButton = props => {
     props.history.goBack();
     setTimeout(() => {
       setAnimateOnClick(false);
-    }, 1000);
+    }, 300);
   };
   return (
     <div className={styles.backButton} onClick={animateClickHandler}>

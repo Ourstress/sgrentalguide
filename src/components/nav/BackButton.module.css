@@ -9,16 +9,16 @@
   transition: background 0.2s ease;
   border-radius: 50%;
 }
-.backButton:active {
+/* .backButton:active {
   background: rgba(112, 128, 144, 0.5);
-}
+} */
 
 .backButton:active .arrowWrap span {
   background: #fff;
 }
 
 .arrowWrapBack {
-  left: 0% !important;
+  left: -50% !important;
 }
 
 .arrowWrap {
@@ -35,7 +35,7 @@
 .arrowWrap span {
   height: 4px;
   left: 5px;
-  background: #cdcdcd;
+  background: rgba(0, 0, 0, 0.54);
   position: absolute;
   display: block;
   transition: background 0.2s ease;

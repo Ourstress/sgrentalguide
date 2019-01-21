@@ -27,7 +27,7 @@ const RouterComponent = () => {
       <React.Fragment>
         <nav className="header">
           <Link to="/" className="headerText">
-            sgpropguide
+            sg rental guide
           </Link>
           <BackButton />
           {SidebarMenuToggle}

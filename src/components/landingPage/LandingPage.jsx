@@ -7,7 +7,9 @@ const LandingPage = () => {
   return (
     <div className={styles.contentContainer}>
       <p>Hello there!</p>
-      <p>sgpropguide is your go-to page for real estate info in Singapore.</p>
+      <p>
+        sg rental guide is your go-to page for real estate info in Singapore.
+      </p>
       <Link to="/Rental" className={styles.link}>
         Guides on Rental
       </Link>

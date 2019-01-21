@@ -1,5 +1,5 @@
 .contentContainer {
-  margin: 0 10vw;
+  margin: 0 calc(10px + 1vw);
   margin-top: 72px;
 }
 

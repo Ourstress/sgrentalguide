@@ -3,7 +3,7 @@
   height: 40px;
   position: absolute;
   top: 50%;
-  left: calc(70px + 1vw);
+  left: calc(68px + 2vw);
   transform: translate(-50%, -50%);
   overflow: hidden;
   transition: background 0.2s ease;
@@ -25,7 +25,7 @@
   display: block;
   position: absolute;
   height: 70%;
-  width: 70%;
+  width: 60%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

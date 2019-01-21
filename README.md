@@ -1,5 +1,24 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Notes
+
+It fetches data from airtable - see under src/data/AirtableAPI.jsx
+It authenticates users using netlify auth providers (specifically through github) - see under src/data/auth.jsx
+
+There are only 3 pages - landing page, category page & details page.
+
+- Landing page doesn't have any much content. Category page links to individual detail page.
+- Details page is the more interesting page that shows 2 views - one view for readers and another view for the editor who can edit the contents and save changes to airtable.
+
+Outstanding CSS issues
+
+- the hamburger menu and backbutton positioning isn't aligned because the code for both originated from different sources.
+- the hamburger's cross mode (where it turns into a cross) looks smaller than the hamburger
+
+## Adapting to your use
+
+- key in your airtable API key as environmental variable in your hosting provider
+
 ## Available Scripts
 
 In the project directory, you can run:

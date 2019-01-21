@@ -2,7 +2,6 @@
   font-size: 18px;
   line-height: 18px;
   font-family: "quicksand", "ibm-plex-sans-condensed";
-  background-color: rgb(251, 251, 251);
 }
 @media (min-height: 399px) {
   * {
@@ -58,6 +57,7 @@ main {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
+  background-color: rgb(251, 251, 251);
 }
 a {
   text-decoration: none;

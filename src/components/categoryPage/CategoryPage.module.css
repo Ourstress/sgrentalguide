@@ -16,3 +16,14 @@
   /* max-width: 35em;
   min-width: 25em; */
 }
+
+@media (max-width: 600px) {
+  .linkContainer {
+    margin-top: 54px;
+  }
+}
+@media (max-height: 600px) {
+  .linkContainer {
+    margin-top: 54px;
+  }
+}
